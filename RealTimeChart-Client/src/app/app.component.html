@@ -1,0 +1,15 @@
+
+<div style="display: block" *ngIf='SignalRService.data'>
+  <canvas baseChart
+          height="70"
+          width="200"
+          [datasets]="SignalRService.data"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          [chartType]="chartType"
+          [colors]="colors"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+  
